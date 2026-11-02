@@ -31,10 +31,24 @@ with [LG Input Hook](https://github.com/Simon34545/lginputhook) (app ID
 
 ## Install
 
-**From a release**: download the `.ipk` and install with Homebrew Channel,
-[webOS CLI](https://webostv.developer.lge.com/develop/tools/cli-installation)
-(`ares-install`), or [webOS Dev Manager](https://github.com/webosbrew/dev-manager-desktop).
-Works in LG Developer Mode without root.
+Precisa do pacote `.ipk`:
+`com.pplferreira.webos-clean-launcher_<versão>_all.ipk`
+(gerado com `npm run package`, ou o artifact `webos-clean-launcher.bundle`,
+que é o mesmo arquivo).
+
+Funciona no **LG Developer Mode**, sem root. PC e TV precisam estar na **mesma rede**.
+
+Guia completo: [docs/instalacao-developer-mode.md](docs/instalacao-developer-mode.md).
+
+### Resumo (Developer Mode + Dev Manager)
+
+1. Conta em [webostv.developer.lge.com](https://webostv.developer.lge.com).
+2. Na TV: LG Content Store → **Developer Mode** → instalar → login → **Dev Mode Status** ON (reinicia) → **Key Server** ON.
+3. No PC: [webOS Dev Manager](https://github.com/webosbrew/dev-manager-desktop/releases) → Add Device (IP da TV, porta **9922**, user **`prisoner`**, passphrase da TV) → Install → escolha o `.ipk` / `.bundle`.
+4. Abra **Clean Launcher** na lista de apps da TV.
+
+Alternativas: Homebrew Channel (TV com root) ou
+[webOS CLI](https://webostv.developer.lge.com/develop/tools/cli-installation) (`ares-install`).
 
 ## Build
 
