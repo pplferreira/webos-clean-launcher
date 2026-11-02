@@ -32,21 +32,24 @@ export interface LocalCatalog {
 const BASE_CATALOG: CatalogApp[] = [
 	// Global streaming
 	{id: 'youtube.leanback.v4', title: 'YouTube', icon: 'youtube.leanback.v4.png'},
-	{id: 'netflix', title: 'Netflix', color: '#b1060f'},
+	{id: 'netflix', title: 'Netflix', icon: 'netflix.png', color: '#b1060f'},
 	{id: 'amazon', title: 'Prime Video', icon: 'amazon.png'},
-	{id: 'com.disney.disneyplus-prod', title: 'Disney+', color: '#0f2b6b'},
+	{id: 'com.disney.disneyplus-prod', title: 'Disney+', icon: 'com.disney.disneyplus-prod.png', color: '#0f2b6b'},
 	{id: 'com.apple.appletv', title: 'Apple TV', icon: 'com.apple.appletv.png'},
-	{id: 'com.wbd.stream', title: 'Max', color: '#002be7'},
+	{id: 'com.wbd.stream', title: 'Max', icon: 'com.wbd.stream.png', color: '#002be7'},
 	{id: 'cdp-30', title: 'Plex', icon: 'cdp-30.png'},
-	{id: 'spotify-beehive', title: 'Spotify', color: '#1db954'},
+	{id: 'spotify-beehive', title: 'Spotify', icon: 'spotify-beehive.png', color: '#1db954'},
 	{id: 'tv.twitch.tv.starshot.lg', title: 'Twitch', icon: 'tv.twitch.tv.starshot.lg.png'},
+	{id: 'com.paramountstream.app', title: 'Paramount+', icon: 'com.paramountstream.app.png', color: '#0063a7'},
+	{id: 'com.crunchyroll.crunchyroll', title: 'Crunchyroll', icon: 'com.crunchyroll.crunchyroll.png', color: '#f47521'},
+	{id: 'com.globo.globotv', title: 'Globoplay', icon: 'com.globo.globotv.png', color: '#eb2832'},
 	// North America
-	{id: 'hulu', title: 'Hulu', color: '#1ce783'},
-	{id: 'youtube.leanback.ytv.v1', title: 'YouTube TV', color: '#cc0000'},
-	{id: 'com.plutotv.app', title: 'Pluto TV', color: '#2b2b2b'},
-	{id: 'com.tubitv.ott.tubi', title: 'Tubi', color: '#7408ff'},
-	{id: 'com.espn.espnplus-prod', title: 'ESPN', color: '#c8102e'},
-	{id: 'vudu', title: 'Fandango at Home', color: '#3399ff'},
+	{id: 'hulu', title: 'Hulu', icon: 'hulu.png', color: '#1ce783'},
+	{id: 'youtube.leanback.ytv.v1', title: 'YouTube TV', icon: 'youtube.leanback.ytv.v1.png', color: '#cc0000'},
+	{id: 'com.plutotv.app', title: 'Pluto TV', icon: 'com.plutotv.app.png', color: '#2b2b2b'},
+	{id: 'com.tubitv.ott.tubi', title: 'Tubi', icon: 'com.tubitv.ott.tubi.png', color: '#7408ff'},
+	{id: 'com.espn.espnplus-prod', title: 'ESPN', icon: 'com.espn.espnplus-prod.png', color: '#c8102e'},
+	{id: 'vudu', title: 'Fandango at Home', icon: 'vudu.png', color: '#3399ff'},
 	// UK
 	{id: 'bbc.iplayer.3.0', title: 'BBC iPlayer', icon: 'bbc.iplayer.3.0.png'},
 	{id: 'bbc.sounds.1.0', title: 'BBC Sounds', icon: 'bbc.sounds.1.0.png'},
@@ -61,19 +64,20 @@ const BASE_CATALOG: CatalogApp[] = [
 	{id: 'com.webos.app.igallery', title: 'Art Gallery', icon: 'com.webos.app.igallery.png'},
 	{id: 'com.webos.app.homeconnect', title: 'Home Dashboard', icon: 'com.webos.app.homeconnect.png'},
 	{id: 'amazon.alexa.view', title: 'Alexa', icon: 'amazon.alexa.view.png'},
-	{id: 'com.palm.app.settings', title: 'LG Settings', color: '#2f3339'},
+	{id: 'com.palm.app.settings', title: 'LG Settings', icon: 'com.palm.app.settings.png', color: '#2f3339'},
 	// webOS Homebrew
 	{id: 'org.webosbrew.hbchannel', title: 'Homebrew', icon: 'org.webosbrew.hbchannel.png'},
 	{id: 'org.webosbrew.inputhook', title: 'Input Hook', icon: 'org.webosbrew.inputhook.png'},
 	{id: 'org.webosbrew.safeupdate', title: 'HB Updater', icon: 'org.webosbrew.safeupdate.png'},
 	{id: 'com.lennylxx.iptv', title: 'IPTV Player', icon: 'com.lennylxx.iptv.png'},
-	{id: 'org.jellyfin.webos', title: 'Jellyfin', color: '#00a4dc'}
+	{id: 'org.jellyfin.webos', title: 'Jellyfin', icon: 'org.jellyfin.webos.png', color: '#00a4dc'}
 ];
 
 /** Apps shown on a fresh install, in row order. Anything not installed is skipped. */
 const BASE_DEFAULT_APP_IDS: string[] = [
-	'youtube.leanback.v4', 'netflix', 'amazon', 'com.disney.disneyplus-prod',
-	'com.apple.appletv', 'com.wbd.stream', 'cdp-30', 'spotify-beehive'
+	'youtube.leanback.v4', 'netflix', 'amazon', 'spotify-beehive',
+	'com.disney.disneyplus-prod', 'com.wbd.stream', 'com.apple.appletv',
+	'com.globo.globotv', 'cdp-30'
 ];
 
 // Vite resolves this at build time; it's an empty object when the file doesn't exist.
