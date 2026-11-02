@@ -1,0 +1,17 @@
+{
+  "id": "com.pplferreira.webos-clean-launcher",
+  "version": "1.0.0",
+  "vendor": "com.pplferreira.webos-clean-launcher",
+  "type": "web",
+  "main": "index.html",
+  "title": "Clean Launcher",
+  "appDescription": "Minimalist home screen: apps, inputs and a way back to LG's home.",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "iconColor": "#050505",
+  "bgColor": "#000000",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true,
+  "transparent": false,
+  "requiredACG": []
+}
